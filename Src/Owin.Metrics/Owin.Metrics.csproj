@@ -4,57 +4,65 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E8F49B4-B8D9-4932-909D-821AEFB869B0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{025CD6D0-1A1E-4B14-A7DB-AF5DFF887210}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Metrics.TestConsole</RootNamespace>
-    <AssemblyName>Metrics.TestConsole</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>Owin.Metrics</RootNamespace>
+    <AssemblyName>Owin.Metrics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>1591</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\</OutputPath>
+    <OutputPath>..\..\..\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DocumentationFile>..\..\..\Release\Owin.Metrics.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Middleware\HttpStatusCodeMeterMiddleware.cs" />
+    <Compile Include="Middleware\MetricMiddleware.cs" />
+    <Compile Include="Middleware\OwinMetricsEndpointHandler.cs" />
+    <Compile Include="Middleware\TimerForEachRequestMiddleware.cs" />
+    <Compile Include="Middleware\PostAndPutRequestSizeHistogramMiddleware.cs" />
+    <Compile Include="Middleware\ActiveRequestCounterMiddleware.cs" />
+    <Compile Include="Middleware\ErrorMeterMiddleware.cs" />
+    <Compile Include="Middleware\RequestTimerMiddleware.cs" />
+    <Compile Include="OwinMetrics.cs" />
+    <Compile Include="OwinMetricsConfig.cs" />
+    <Compile Include="Middleware\MetricsEndpointMiddleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="OwinRequestMetricsConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Metrics\Metrics.csproj">
       <Project>{95e29d40-dbec-49e2-9cc5-26b88966dade}</Project>
       <Name>Metrics</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Owin.Metrics.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
