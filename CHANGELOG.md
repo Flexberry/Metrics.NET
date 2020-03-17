@@ -1,3 +1,7 @@
+###1.0.0-alpha01 / 2020-03-16
+* removed adapters except owin
+* changed package names
+
 ###0.5.5 / 2018-02-19
 * added the option to trace initalization of HttpEndpoint
 * owin adapter: middleware that allows tracking of status codes returned from app
