@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Middleware\HttpStatusCodeMeterMiddleware.cs" />
     <Compile Include="Middleware\MetricMiddleware.cs" />
-    <Compile Include="Middleware\OwinMetricsEndpointHandler.cs" />
     <Compile Include="Middleware\TimerForEachRequestMiddleware.cs" />
     <Compile Include="Middleware\PostAndPutRequestSizeHistogramMiddleware.cs" />
     <Compile Include="Middleware\ActiveRequestCounterMiddleware.cs" />
@@ -51,7 +50,6 @@
     <Compile Include="Middleware\RequestTimerMiddleware.cs" />
     <Compile Include="OwinMetrics.cs" />
     <Compile Include="OwinMetricsConfig.cs" />
-    <Compile Include="Middleware\MetricsEndpointMiddleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OwinRequestMetricsConfig.cs" />
   </ItemGroup>

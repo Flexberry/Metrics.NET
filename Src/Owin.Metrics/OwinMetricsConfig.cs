@@ -62,40 +62,5 @@ namespace Owin.Metrics
             config(requestConfig);
             return this;
         }
-
-        /// <summary>
-        /// Expose Owin metrics endpoint
-        /// </summary>
-        /// <returns>Chainable configuration object.</returns>
-        public OwinMetricsConfig WithMetricsEndpoint()
-        {
-            if (this.isDisabled)
-            {
-                return this;
-            }
-
-            WithMetricsEndpoint(_ => { });
-            return this;
-        }
-
-        /// <summary>
-        /// Configure Owin metrics endpoint.
-        /// </summary>
-        /// <param name="config">Action used to configure the Owin Metrics endpoint.</param>
-        /// <param name="endpointPrefix">The relative path the endpoint will be available at.</param>
-        /// <returns>Chainable configuration object.</returns>
-        public OwinMetricsConfig WithMetricsEndpoint(Action<MetricsEndpointReports> config, string endpointPrefix = "metrics")
-        {
-            if (this.isDisabled)
-            {
-                return this;
-            }
-
-            var endpointConfig = new MetricsEndpointReports(this.context.DataProvider, this.healthStatus);
-            config(endpointConfig);
-            var metricsEndpointMiddleware = new MetricsEndpointMiddleware(endpointPrefix, endpointConfig);
-            this.middlewareRegistration(metricsEndpointMiddleware);
-            return this;
-        }
     }
 }

@@ -87,15 +87,7 @@
     <Compile Include="Core\DefaultDataProvider.cs" />
     <Compile Include="Core\DefaultRegistryDataProvider.cs" />
     <Compile Include="Core\SimpleMeter.cs" />
-    <Compile Include="Json\JsonMetric.cs" />
-    <Compile Include="Json\JsonMetricsContext.cs" />
-    <Compile Include="Json\JsonTimer.cs" />
-    <Compile Include="Json\JsonHistogram.cs" />
-    <Compile Include="Json\JsonMeter.cs" />
-    <Compile Include="Json\JsonGauge.cs" />
-    <Compile Include="Json\JsonCounter.cs" />
     <Compile Include="Core\ReadOnlyMetricsContext.cs" />
-    <Compile Include="Json\JsonHealthChecks.cs" />
     <Compile Include="MetricData\ConstantValue.cs" />
     <Compile Include="MetricData\CounterValue.cs" />
     <Compile Include="MetricData\EnvironmentEntry.cs" />
@@ -106,12 +98,7 @@
     <Compile Include="MetricData\TimerValue.cs" />
     <Compile Include="MetricData\ValueReader.cs" />
     <Compile Include="MetricTags.cs" />
-    <Compile Include="RemoteMetrics\HttpRemoteMetrics.cs" />
-    <Compile Include="RemoteMetrics\RemoteMetricsExtensions.cs" />
-    <Compile Include="RemoteMetrics\RemoteMetricsContext.cs" />
     <Compile Include="Reporters\MetricsReport.cs" />
-    <Compile Include="Reporters\MetricsEndpointReports.cs" />
-    <Compile Include="Reporters\EndpointReporterConfig.cs" />
     <Compile Include="Sampling\ExponentiallyDecayingReservoir.cs" />
     <Compile Include="Core\HealthCheck.cs" />
     <Compile Include="Core\MetricsBuilder.cs" />
@@ -129,14 +116,11 @@
     <Compile Include="HealthChecks.cs" />
     <Compile Include="Histogram.cs" />
     <Compile Include="MetricsContext.cs" />
-    <Compile Include="Json\JsonProperty.cs" />
-    <Compile Include="Json\JsonValue.cs" />
     <Compile Include="Meter.cs" />
     <Compile Include="Core\MetricsRegistry.cs" />
     <Compile Include="Core\DefaultMetricsContext.cs" />
     <Compile Include="MetricData\MetricsFilter.cs" />
     <Compile Include="MetricsConfig.cs" />
-    <Compile Include="Json\JsonBuilderV2.cs" />
     <Compile Include="MetricData\MetricsData.cs" />
     <Compile Include="Reporters\CSVAppender.cs" />
     <Compile Include="Reporters\MetricsReports.cs" />
@@ -147,8 +131,6 @@
     <Compile Include="Reporters\ConsoleReport.cs" />
     <Compile Include="Reporters\CSVFileAppender.cs" />
     <Compile Include="Reporters\CSVReport.cs" />
-    <Compile Include="Json\JsonBuilderV1.cs" />
-    <Compile Include="Json\JsonObject.cs" />
     <Compile Include="Reporters\StringReport.cs" />
     <Compile Include="Reporters\TextFileReport.cs" />
     <Compile Include="Reporters\BaseReport.cs" />
@@ -178,16 +160,6 @@
     <Compile Include="Utils\Scheduler.cs" />
     <Compile Include="Utils\TaskEx.cs" />
     <Compile Include="Utils\TimeUnitExtensions.cs" />
-    <Compile Include="Endpoints\AbstractMetricsEndpointHandler.cs" />
-    <Compile Include="Endpoints\FlotWebApp.cs" />
-    <Compile Include="Endpoints\MetricsEndpoint.cs" />
-    <Compile Include="Endpoints\MetricsEndpointHandler.cs" />
-    <Compile Include="Endpoints\MetricsEndpointRequest.cs" />
-    <Compile Include="Endpoints\MetricsEndpointResponse.cs" />
-    <Compile Include="Endpoints\MetricsHttpListener.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Endpoints\index.full.html.gz" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Metrics.NET.nuspec" />

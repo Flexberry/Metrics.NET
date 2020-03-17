@@ -120,10 +120,6 @@
   <ItemGroup>
     <Compile Include="Core\DefaultContextCustomMetricsTests.cs" />
     <Compile Include="Core\MetricTagsTests.cs" />
-    <Compile Include="Endpoints\MetricsEndpointRequestTests.cs" />
-    <Compile Include="Endpoints\MetricsEndpointResponseTests.cs" />
-    <Compile Include="Endpoints\TestMetricsEndpointHandler.cs" />
-    <Compile Include="Json\JsonSerializationTests.cs" />
     <Compile Include="Metrics\CounterMetricTests.cs" />
     <Compile Include="Metrics\GaugeMetricTests.cs" />
     <Compile Include="Sampling\DefaultSamplingTypeTests.cs" />
@@ -133,7 +129,6 @@
     <Compile Include="HealthChecksTests\HealthCheckRegistryTests.cs" />
     <Compile Include="HealthChecksTests\HealthCheckTests.cs" />
     <Compile Include="Metrics\HistogramMetricTests.cs" />
-    <Compile Include="Json\JsonTests.cs" />
     <Compile Include="Metrics\MeterMetricTests.cs" />
     <Compile Include="Core\DefaultContextTests.cs" />
     <Compile Include="OwinAdapter\OwinMiddlewareTests.cs" />
@@ -149,10 +144,6 @@
     <Compile Include="Utils\MetricUnitTests.cs" />
     <Compile Include="Utils\TimeUnitTests.cs" />
     <Compile Include="Sampling\UniformReservoirTests.cs" />
-    <Compile Include="Endpoints\FlotVisualizationTests.cs" />
-    <Compile Include="Endpoints\MetricsEndpointHandlerTests.cs" />
-    <Compile Include="Endpoints\MetricsEndpointTests.cs" />
-    <Compile Include="Endpoints\MetricsHttpListenerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Metrics\Metrics.csproj">

@@ -19,8 +19,7 @@ namespace Owin.Metrics
         public static MetricsConfig WithOwin(this MetricsConfig config, Action<object> middlewareRegistration)
         {
             return config.WithOwin(middlewareRegistration, owin =>
-                                owin.WithRequestMetricsConfig()
-                                    .WithMetricsEndpoint());
+                                owin.WithRequestMetricsConfig());
         }
 
         /// <summary>
