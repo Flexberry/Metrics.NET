@@ -40,6 +40,12 @@
     <DocumentationFile>..\..\bin\Release\Metrics.XML</DocumentationFile>
     <NoWarn>1591; 1570; 1587;</NoWarn>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Flexberry.Metrics.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -162,6 +168,7 @@
     <Compile Include="Utils\TimeUnitExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Flexberry.Metrics.snk" />
     <None Include="Metrics.NET.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
