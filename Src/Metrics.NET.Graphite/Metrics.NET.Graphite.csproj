@@ -34,14 +34,23 @@
     <DocumentationFile>..\..\bin\Release\Metrics.NET.Graphite.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Metrics, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Metrics.NET.0.5.0-pre\lib\net45\Metrics.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Metrics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=d52b9c7820125fac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NewPlatform.Flexberry.Metrics.1.0.0-alpha02\lib\net45\Metrics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\AtomicIntArray.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\AtomicInteger.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\AtomicLong.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\AtomicLongArray.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\PaddedAtomicLong.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\Striped64.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\StripedLongAdder.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\ThreadLocalLongAdder.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\ThreadLocalRandom.cs" />
+    <Compile Include="App_Packages\ConcurrencyUtils.0.1.4\VolatileDouble.cs" />
     <Compile Include="SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
@@ -55,7 +64,9 @@
     <Compile Include="UdpGraphiteSender.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
