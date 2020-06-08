@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>NewPlatform.Flexberry.Metrics</id>
-    <version>1.0.0-alpha01</version>
+    <version>1.0.0-alpha03</version>
     <title>NewPlatform.Flexberry.Metrics</title>
     <authors>iulian.margarintescu, The Recognos Metrics.NET Team</authors>
     <licenseUrl>https://github.com/Flexberry/Metrics.NET/blob/master/LICENSE</licenseUrl>
@@ -11,6 +11,9 @@
     <description>The library provides support for capturing: Gauges, Counters, Meters, Histograms and Timers</description>
     <summary>.NET Port of the Java Metrics Library, a library for collecting metrics. Library also provides Health Checks.</summary>
     <tags>metrics</tags>
+    <releaseNotes>
+      * Metrics.NET.Graphite is added to this solution.
+    </releaseNotes>
   </metadata>
   <files>
     <file src="bin\Debug\Metrics.dll" target="lib\net45\Metrics.dll" />

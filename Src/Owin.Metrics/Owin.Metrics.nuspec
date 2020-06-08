@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
 	<metadata>
 		<id>NewPlatform.Flexberry.Metrics.Owin</id>
-		<version>1.0.0-alpha01</version>
+		<version>1.0.0-alpha02</version>
 		<title>NewPlatform.Flexberry.Metrics.Owin</title>
 		<authors>Allan Hardy</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,7 +12,7 @@
     <projectUrl>https://github.com/Flexberry/Metrics.NET</projectUrl>		
 		<tags>webapi, owin, metrics</tags>
 		<dependencies>
-			<dependency id="NewPlatform.Flexberry.Metrics.NET" version="1.0.0-alpha01" />
+			<dependency id="NewPlatform.Flexberry.Metrics" version="1.0.0-alpha02" />
 		</dependencies>
 	</metadata>
 	<files>

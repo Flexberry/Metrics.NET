@@ -172,6 +172,12 @@
     <None Include="Metrics.NET.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Metrics.NET.Graphite\Metrics.NET.Graphite.csproj">
+      <Project>{fc53b6c4-f205-46e6-a83d-4478c579c04a}</Project>
+      <Name>Metrics.NET.Graphite</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
